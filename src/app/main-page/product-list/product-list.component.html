@@ -1,0 +1,56 @@
+<div *ngFor="let product of products" class="prod">
+
+  <div class="content">
+
+    <h3>
+      <a
+        [title] = "product.name + ' details'"
+        [routerLink]="['/products', product.id]">
+        {{ product.name }}
+      </a>
+    </h3>
+
+    <div class="inner">
+
+      <p *ngIf="product.description">
+        Description: {{ product.description }}
+      </p>
+
+<!--      <p *ngIf="product.rating">-->
+<!--        rating: {{ product.rating }}-->
+<!--      </p>-->
+
+      <img class="image" [src]="product.pic[0]" width="250px">
+
+    </div>
+
+    <div class="btns">
+
+      <div class="first_col">
+
+        <button type="button" >
+          Share
+        </button>
+
+        <div class="like-btn">
+          <button type="button" >Like</button>
+<!--          <p> {{ product.likes }}</p>-->
+        </div>
+
+      </div>
+
+      <div class="second_col">
+
+<!--        <app-product-alerts-->
+<!--          [product]="product"-->
+<!--          (notify)="onNotify()">-->
+<!--        </app-product-alerts>-->
+
+<!--        <button type="button" (click)="deleteItem(product.id)">Delete</button>-->
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
