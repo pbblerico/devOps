@@ -1,52 +1,44 @@
-<div *ngFor="let product of products" class="prod">
+<div class="prod">
 
-  <div class="content">
+  <div *ngFor="let product of products">
 
-    <h3>
-      <a
-        [title] = "product.name + ' details'"
-        [routerLink]="['/products', product.id]">
-        {{ product.name }}
-      </a>
-    </h3>
+    <div class="content" routerLink="/products/{{product.name}}">
 
-    <div class="inner">
+      <h3>
+        <a >
+          {{ product.name }}
+        </a>
+      </h3>
 
-      <p *ngIf="product.description">
-        Description: {{ product.description }}
-      </p>
+      <div class="inner">
 
-<!--      <p *ngIf="product.rating">-->
-<!--        rating: {{ product.rating }}-->
-<!--      </p>-->
+        <p *ngIf="product.description">
+          Description: {{ product.description }}
+        </p>
 
-      <img class="image" [src]="product.pic[0]" width="250px">
+  <!--      <p *ngIf="product.rating">-->
+  <!--        rating: {{ product.rating }}-->
+  <!--      </p>-->
 
-    </div>
-
-    <div class="btns">
-
-      <div class="first_col">
-
-        <button type="button" >
-          Share
-        </button>
-
-        <div class="like-btn">
-          <button type="button" >Like</button>
-<!--          <p> {{ product.likes }}</p>-->
-        </div>
+        <img class="image" [src]="product.pic[0]" width="250px">
 
       </div>
 
-      <div class="second_col">
+      <div class="btns">
 
-<!--        <app-product-alerts-->
-<!--          [product]="product"-->
-<!--          (notify)="onNotify()">-->
-<!--        </app-product-alerts>-->
+        <div class="first_col">
 
-<!--        <button type="button" (click)="deleteItem(product.id)">Delete</button>-->
+          <button type="button" >
+            Share
+          </button>
+
+          <div class="like-btn">
+            <button type="button" >Like</button>
+  <!--          <p> {{ product.likes }}</p>-->
+          </div>
+
+        </div>
+
       </div>
 
     </div>
