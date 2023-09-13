@@ -8,6 +8,7 @@ import { ProductListComponent } from './main-page/product-list/product-list.comp
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { SideMenuComponent } from './main-page/side-menu/side-menu.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

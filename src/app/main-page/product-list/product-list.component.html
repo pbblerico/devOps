@@ -1,5 +1,7 @@
 <div class="prod">
 
+
+
   <div *ngFor="let product of products">
 
     <div class="content" >
@@ -20,7 +22,11 @@
 
       </div>
 
-      <div class="btns">
+      <div class="info">
+
+        <div class="price">
+          <p> price: {{product.price}}</p>
+        </div>
 
         <div class="first_col">
 
