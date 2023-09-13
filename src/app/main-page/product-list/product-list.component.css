@@ -18,13 +18,17 @@
   font-size: 12px;
 }
 
-.content:hover {
+.content h3 {
   cursor: pointer;
 }
 
+/*.content:hover {*/
+/*  cursor: pointer;*/
+/*}*/
+
 .product-image {
   margin: 20px 0;
-  background-color: rgb(33, 53, 85);
+  /*background-color: rgb(33, 53, 85);*/
 }
 
 .product-image img {

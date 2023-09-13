@@ -2,9 +2,9 @@
 
   <div *ngFor="let product of products">
 
-    <div class="content" routerLink="/products/{{product.name}}">
+    <div class="content" >
 
-      <h3>
+      <h3 routerLink="/products/{{product.name}}">
         {{ product.name }}
       </h3>
 
