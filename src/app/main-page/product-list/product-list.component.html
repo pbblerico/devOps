@@ -5,9 +5,7 @@
     <div class="content" routerLink="/products/{{product.name}}">
 
       <h3>
-        <a >
-          {{ product.name }}
-        </a>
+        {{ product.name }}
       </h3>
 
       <div class="inner">
@@ -16,11 +14,9 @@
           Description: {{ product.description }}
         </p>
 
-  <!--      <p *ngIf="product.rating">-->
-  <!--        rating: {{ product.rating }}-->
-  <!--      </p>-->
-
-        <img class="image" [src]="product.pic[0]" width="250px">
+        <div class="product-image">
+          <img class="image" [src]="product.pic" height="150px">
+        </div>
 
       </div>
 
@@ -33,7 +29,7 @@
           </button>
 
           <div class="like-btn">
-            <button type="button" >Like</button>
+            <button type="button" >Buy</button>
   <!--          <p> {{ product.likes }}</p>-->
           </div>
 
